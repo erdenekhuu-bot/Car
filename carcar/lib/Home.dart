@@ -165,6 +165,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _currentPage,
         onTap: _switchPage,
         items: [
@@ -177,9 +178,13 @@ class _HomeState extends State<Home> {
             label: '',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.car_crash),
+            icon: Icon(Icons.car_rental),
             label: '',
           ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.supervised_user_circle_outlined),
+            label: '',
+          )
         ],
       ),
     );

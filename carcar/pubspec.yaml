@@ -66,6 +66,12 @@ flutter:
     - images/pin.png
     - images/car.png
     - images/user.png
+    - images/Rectangle5275.png
+    - images/Group23.png
+    - images/Group19.png
+    - images/Vector.png
+    - images/Group55.png
+    - images/Vectorm.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

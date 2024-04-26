@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'category/Map.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -8,7 +9,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _currentPage = 1;
+  int _currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -165,6 +166,8 @@ class _HomeState extends State<Home> {
             _currentPage = pages;
           });
           if (_currentPage == 1) {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Map()));
           } else if (_currentPage == 2) {
           } else if (_currentPage == 3) {}
         },

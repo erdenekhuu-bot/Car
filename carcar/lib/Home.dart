@@ -8,16 +8,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _currentPage = 1;
+
   @override
   Widget build(BuildContext context) {
-    int _currentPage = 0;
-
-    void _switchPage(int page) {
-      setState(() {
-        _currentPage = page;
-      });
-    }
-
     return Scaffold(
       body: ListView(
         children: [
@@ -149,15 +143,14 @@ class _HomeState extends State<Home> {
                   child: Image(image: AssetImage('images/Group55.png')),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  width: 60,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: Color(0xff404040),
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  child: Image(image: AssetImage('images/Vectorm.png')),
-                ),
+                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Color(0xff404040),
+                      borderRadius: BorderRadius.circular(60),
+                    ),
+                    child: Image.asset('images/Vectorm.png')),
               ]),
               Row()
             ],
@@ -166,23 +159,33 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.black,
+        onTap: (pages) {
+          setState(() {
+            _currentPage = pages;
+          });
+          if (_currentPage == 1) {
+          } else if (_currentPage == 2) {
+          } else if (_currentPage == 3) {}
+        },
         currentIndex: _currentPage,
-        onTap: _switchPage,
-        items: [
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+        items: const [
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('images/Vectorhome.png')),
             label: '',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.pin_drop_outlined),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('images/Group41.png')),
             label: '',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.car_rental),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('images/Rectangle247.png'),
+            ),
             label: '',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.supervised_user_circle_outlined),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('images/Vectoruser.png')),
             label: '',
           )
         ],

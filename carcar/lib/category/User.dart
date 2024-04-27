@@ -11,7 +11,9 @@ class _UserState extends State<User> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: <Widget>[]),
+      body: Center(
+        child: Text('User page'),
+      ),
     );
   }
 }

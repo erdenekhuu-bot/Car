@@ -10,6 +10,10 @@ class Car extends StatefulWidget {
 class _CarState extends State<Car> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text('Car page'),
+      ),
+    );
   }
 }

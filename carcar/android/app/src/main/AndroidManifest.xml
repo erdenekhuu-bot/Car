@@ -3,6 +3,7 @@
         android:label="carcar"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -20,7 +21,7 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               /> -->
-                
+           
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -31,9 +32,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyADy42q3Y3bh9a0tafIRnF5daW--2dlyJM"/>
+        
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyB1knZXIKS2Lu1stXItkwCMF-rUXn5lsoo"/>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility?hl=en and

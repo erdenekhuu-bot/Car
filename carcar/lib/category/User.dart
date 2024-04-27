@@ -10,6 +10,8 @@ class User extends StatefulWidget {
 class _UserState extends State<User> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Column(children: <Widget>[]),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'usable/Card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -98,59 +99,61 @@ class _HomePageState extends State<HomePage> {
                       )),
                 ],
               ),
-              SizedBox(height: 10),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  width: 60,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: Color(0xff404040),
-                    borderRadius: BorderRadius.circular(60),
+              const SizedBox(height: 12),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: 18,
+                    children: [
+                      Cart(
+                          img: Image.asset('images/Group23.png'),
+                          txt: 'Агрегат'),
+                      Cart(
+                          img: Image.asset('images/Group19.png'), txt: 'Кузов'),
+                      Cart(img: Image.asset('images/Vector.png'), txt: 'Дугуй'),
+                      Cart(
+                          img: Image.asset('images/Group55.png'),
+                          txt: 'Угаалга'),
+                      Cart(
+                          img: Image.asset('images/Vectorm.png'),
+                          txt: 'Мотоцикл'),
+                      Cart(
+                          img: Image.asset('images/Group17.png'),
+                          txt: 'Оношилгоо'),
+                      Cart(
+                          img: Image.asset('images/Group40.png'),
+                          txt: 'Тос тосолгоо'),
+                      Cart(
+                          img: Image.asset('images/amor.png'),
+                          txt: 'Амартизатор'),
+                      Cart(
+                          img: Image.asset('images/Group381.png'),
+                          txt: 'Акумлятор'),
+                      Cart(
+                          img: Image.asset('images/marketeq_chassis.png'),
+                          txt: 'Тэнхлэг тохиргоо'),
+                      Cart(
+                          img: Image.asset('images/Group301.png'),
+                          txt: 'Мотор засвар'),
+                      Cart(
+                          img: Image.asset('images/Vector11.png'),
+                          txt: 'Явах эд анги'),
+                      Cart(
+                          img: Image.asset('images/Group33.png'),
+                          txt: 'Эйр кондишн'),
+                      Cart(
+                          img: Image.asset('images/line-md_computer.png'),
+                          txt: 'Ком.оншилгоо'),
+                      Cart(
+                          img: Image.asset('images/Vector41.png'),
+                          txt: 'Дугуй'),
+                    ],
                   ),
-                  child: Image(image: AssetImage('images/Group23.png')),
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  width: 60,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: Color(0xff404040),
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  child: Image(image: AssetImage('images/Group19.png')),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  width: 60,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: Color(0xff404040),
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  child: Image(image: AssetImage('images/Vector.png')),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  width: 60,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: Color(0xff404040),
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  child: Image(image: AssetImage('images/Group55.png')),
-                ),
-                Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Color(0xff404040),
-                      borderRadius: BorderRadius.circular(60),
-                    ),
-                    child: Image.asset('images/Vectorm.png')),
-              ]),
-              Row()
+              ),
             ],
           ),
         ],

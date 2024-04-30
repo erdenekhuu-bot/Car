@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'usable/Card.dart';
+import 'usable/SubTitle.dart';
+import 'usable/BackgroundImage.dart';
+import 'usable/OfferPlace.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 243, 242, 242),
       body: ListView(
         children: [
           Column(
@@ -46,16 +50,7 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 360,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffC4C4C4),
-                    ),
-                    child: const Image(
-                        image: AssetImage('images/Rectangle5275.png')),
-                  ),
+                  BackgroundImage(img: Image.asset('images/Rectangle5275.png')),
                 ],
               ),
               const SizedBox(height: 10),
@@ -68,37 +63,17 @@ class _HomePageState extends State<HomePage> {
                     child: TextField(
                       onTap: () {},
                       decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
                           hintText: '',
                           prefixIcon: Icon(Icons.search),
-                          border: OutlineInputBorder()),
+                          border: InputBorder.none),
                     ),
                   ),
                 ],
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Text('Үйлчилгээ',
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Inter'))),
-                  Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Row(
-                        children: [
-                          Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 3),
-                              child:
-                                  Text('Бүгд', style: TextStyle(fontSize: 14))),
-                          Icon(Icons.arrow_forward_ios_outlined, size: 15)
-                        ],
-                      )),
-                ],
-              ),
+              SubTitle(firstTitle: 'Үйлчилгээ', secondTitle: 'Бүгд'),
               const SizedBox(height: 12),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -154,6 +129,13 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+              SizedBox(height: 25),
+              SubTitle(
+                  firstTitle: 'Санал болгож буй газрууд', secondTitle: 'Бүгд'),
+              SizedBox(height: 10),
+              OfferPlace(
+                  img: Image.asset('images/Rectangle5219.png'),
+                  name: 'Auto Grand'),
             ],
           ),
         ],

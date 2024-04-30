@@ -21,6 +21,7 @@ class _Page1State extends State<Page1> {
   Widget build(BuildContext context) {
     print(_token);
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 243, 242, 242),
       appBar: AppBar(
         leading: IconButton(
           icon: Image.asset(

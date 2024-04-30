@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 243, 242, 242),
       body: _page[_currentPage],
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (page) {

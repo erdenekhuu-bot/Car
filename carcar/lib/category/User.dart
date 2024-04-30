@@ -11,6 +11,7 @@ class _UserState extends State<User> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 243, 242, 242),
       body: Center(
         child: Text('User page'),
       ),

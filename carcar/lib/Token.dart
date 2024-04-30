@@ -11,6 +11,7 @@ class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 243, 242, 242),
       appBar: AppBar(
         leading: IconButton(
           icon: Image.asset(

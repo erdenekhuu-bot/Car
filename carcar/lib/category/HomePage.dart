@@ -47,11 +47,22 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  BackgroundImage(img: Image.asset('images/Rectangle5275.png')),
-                ],
+              ConstrainedBox(
+                constraints: BoxConstraints(maxWidth: 360),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      BackgroundImage(
+                        img: Image.asset('images/Rectangle5275.png'),
+                      ),
+                      BackgroundImage(
+                        img: Image.asset('images/Rectangle5275.png'),
+                      ),
+                    ],
+                  ),
+                ),
               ),
               const SizedBox(height: 10),
               Row(
@@ -133,9 +144,63 @@ class _HomePageState extends State<HomePage> {
               SubTitle(
                   firstTitle: 'Санал болгож буй газрууд', secondTitle: 'Бүгд'),
               SizedBox(height: 10),
-              OfferPlace(
-                  img: Image.asset('images/Rectangle5219.png'),
-                  name: 'Auto Grand'),
+              ConstrainedBox(
+                constraints: BoxConstraints(maxHeight: 215),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    children: <Widget>[
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ],

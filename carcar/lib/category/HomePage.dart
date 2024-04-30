@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
               SubTitle(firstTitle: 'Үйлчилгээ', secondTitle: 'Бүгд'),
               const SizedBox(height: 12),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 8),
+                padding: EdgeInsets.all(8),
                 width: 351,
                 color: Colors.white,
                 child: ConstrainedBox(

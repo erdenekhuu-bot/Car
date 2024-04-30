@@ -93,6 +93,8 @@ flutter:
     - images/Rectangle5219.png
     - images/Vectorphone.png
     - images/iconoir_headset-help.png
+    - images/Group24.png
+    - images/Group21.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

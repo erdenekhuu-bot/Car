@@ -95,6 +95,12 @@ flutter:
     - images/iconoir_headset-help.png
     - images/Group24.png
     - images/Group21.png
+    - images/Group69.png
+    - images/paintCar.png
+    - images/Group85.png
+    - images/Group68.png
+    - images/Group20.png
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

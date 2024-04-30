@@ -158,6 +158,19 @@ class _HomePageState extends State<HomePage> {
                         Cart(
                             img: Image.asset('images/Group24.png'),
                             txt: 'Наклад тормос'),
+                        Cart(
+                            img: Image.asset('images/Group69.png'),
+                            txt: 'Машин худалдаа'),
+                        Cart(
+                          img: Image.asset('images/Group85.png'),
+                          txt: 'Машин будаг',
+                        ),
+                        Cart(
+                            img: Image.asset('images/Group68.png'),
+                            txt: 'Дуудлагын засвар'),
+                        Cart(
+                            img: Image.asset('images/Group20.png'),
+                            txt: 'Машин ачлага')
                       ],
                     ),
                   ),

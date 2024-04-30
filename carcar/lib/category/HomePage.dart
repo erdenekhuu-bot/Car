@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
               SubTitle(firstTitle: 'Үйлчилгээ', secondTitle: 'Бүгд'),
               const SizedBox(height: 12),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 10),
+                padding: EdgeInsets.symmetric(vertical: 8),
                 width: 351,
                 color: Colors.white,
                 child: ConstrainedBox(

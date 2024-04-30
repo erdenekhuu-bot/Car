@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -99,7 +99,9 @@ class _HomePageState extends State<HomePage> {
               Container(
                 padding: EdgeInsets.all(8),
                 width: 351,
-                color: Colors.white,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxWidth: 351),
                   child: SingleChildScrollView(
@@ -151,8 +153,11 @@ class _HomePageState extends State<HomePage> {
                             img: Image.asset('images/line-md_computer.png'),
                             txt: 'Ком.оншилгоо'),
                         Cart(
-                            img: Image.asset('images/Vector41.png'),
-                            txt: 'Дугуй'),
+                            img: Image.asset('images/Group21.png'),
+                            txt: 'Сэлбэг худалдаа'),
+                        Cart(
+                            img: Image.asset('images/Group24.png'),
+                            txt: 'Наклад тормос'),
                       ],
                     ),
                   ),
@@ -165,9 +170,22 @@ class _HomePageState extends State<HomePage> {
               ConstrainedBox(
                 constraints: BoxConstraints(maxHeight: 215),
                 child: SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(vertical: 10),
                   scrollDirection: Axis.vertical,
                   child: Column(
                     children: <Widget>[
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
+                      OfferPlace(
+                        img: Image.asset('images/Rectangle5219.png'),
+                        title: 'Auto Grand',
+                        phone: 86999042,
+                      ),
+                      SizedBox(height: 10),
                       OfferPlace(
                         img: Image.asset('images/Rectangle5219.png'),
                         title: 'Auto Grand',

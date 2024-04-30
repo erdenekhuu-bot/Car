@@ -12,6 +12,7 @@ class Cart extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.symmetric(horizontal: 5),
+          alignment: Alignment.center,
           width: 60,
           height: 60,
           decoration: BoxDecoration(

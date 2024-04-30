@@ -21,6 +21,8 @@ class _HomeState extends State<Home> {
       backgroundColor: Color.fromARGB(255, 243, 242, 242),
       body: _page[_currentPage],
       bottomNavigationBar: NavigationBar(
+        height: 60,
+        backgroundColor: Colors.white,
         onDestinationSelected: (page) {
           setState(() {
             _currentPage = page;

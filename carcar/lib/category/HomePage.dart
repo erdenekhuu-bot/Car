@@ -19,32 +19,42 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: [
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 10),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Сайн байна уу.',
-                          style: TextStyle(fontSize: 13),
-                        ),
-                        const Text(
-                          'Машин нэмэх +',
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 10),
+                        Text('Сайн байна уу'),
+                        Text('Car Care',
+                            style: TextStyle(fontFamily: 'Inter', fontSize: 15))
                       ],
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
-                    child: Icon(Icons.notification_add),
-                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8),
+                        child: Text(
+                          'Дуудлагын засвар',
+                          style: TextStyle(fontFamily: 'Inter'),
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            color: Color(0xff232323)),
+                        child: Image.asset('images/iconoir_headset-help.png'),
+                      )
+                    ],
+                  )
                 ],
               ),
               ConstrainedBox(
@@ -86,57 +96,65 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 10),
               SubTitle(firstTitle: 'Үйлчилгээ', secondTitle: 'Бүгд'),
               const SizedBox(height: 12),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: 18,
-                    children: [
-                      Cart(
-                          img: Image.asset('images/Group23.png'),
-                          txt: 'Агрегат'),
-                      Cart(
-                          img: Image.asset('images/Group19.png'), txt: 'Кузов'),
-                      Cart(img: Image.asset('images/Vector.png'), txt: 'Дугуй'),
-                      Cart(
-                          img: Image.asset('images/Group55.png'),
-                          txt: 'Угаалга'),
-                      Cart(
-                          img: Image.asset('images/Vectorm.png'),
-                          txt: 'Мотоцикл'),
-                      Cart(
-                          img: Image.asset('images/Group17.png'),
-                          txt: 'Оношилгоо'),
-                      Cart(
-                          img: Image.asset('images/Group40.png'),
-                          txt: 'Тос тосолгоо'),
-                      Cart(
-                          img: Image.asset('images/amor.png'),
-                          txt: 'Амартизатор'),
-                      Cart(
-                          img: Image.asset('images/Group381.png'),
-                          txt: 'Акумлятор'),
-                      Cart(
-                          img: Image.asset('images/marketeq_chassis.png'),
-                          txt: 'Тэнхлэг тохиргоо'),
-                      Cart(
-                          img: Image.asset('images/Group301.png'),
-                          txt: 'Мотор засвар'),
-                      Cart(
-                          img: Image.asset('images/Vector11.png'),
-                          txt: 'Явах эд анги'),
-                      Cart(
-                          img: Image.asset('images/Group33.png'),
-                          txt: 'Эйр кондишн'),
-                      Cart(
-                          img: Image.asset('images/line-md_computer.png'),
-                          txt: 'Ком.оншилгоо'),
-                      Cart(
-                          img: Image.asset('images/Vector41.png'),
-                          txt: 'Дугуй'),
-                    ],
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                width: 351,
+                color: Colors.white,
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(maxWidth: 351),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 18,
+                      children: [
+                        Cart(
+                            img: Image.asset('images/Group23.png'),
+                            txt: 'Агрегат'),
+                        Cart(
+                            img: Image.asset('images/Group19.png'),
+                            txt: 'Кузов'),
+                        Cart(
+                            img: Image.asset('images/Vector.png'),
+                            txt: 'Дугуй'),
+                        Cart(
+                            img: Image.asset('images/Group55.png'),
+                            txt: 'Угаалга'),
+                        Cart(
+                            img: Image.asset('images/Vectorm.png'),
+                            txt: 'Мотоцикл'),
+                        Cart(
+                            img: Image.asset('images/Group17.png'),
+                            txt: 'Оношилгоо'),
+                        Cart(
+                            img: Image.asset('images/Group40.png'),
+                            txt: 'Тос тосолгоо'),
+                        Cart(
+                            img: Image.asset('images/amor.png'),
+                            txt: 'Амартизатор'),
+                        Cart(
+                            img: Image.asset('images/Group381.png'),
+                            txt: 'Акумлятор'),
+                        Cart(
+                            img: Image.asset('images/marketeq_chassis.png'),
+                            txt: 'Тэнхлэг тохиргоо'),
+                        Cart(
+                            img: Image.asset('images/Group301.png'),
+                            txt: 'Мотор засвар'),
+                        Cart(
+                            img: Image.asset('images/Vector11.png'),
+                            txt: 'Явах эд анги'),
+                        Cart(
+                            img: Image.asset('images/Group33.png'),
+                            txt: 'Эйр кондишн'),
+                        Cart(
+                            img: Image.asset('images/line-md_computer.png'),
+                            txt: 'Ком.оншилгоо'),
+                        Cart(
+                            img: Image.asset('images/Vector41.png'),
+                            txt: 'Дугуй'),
+                      ],
+                    ),
                   ),
                 ),
               ),
